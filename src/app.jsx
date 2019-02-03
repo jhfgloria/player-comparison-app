@@ -1,12 +1,15 @@
 import React from "react";
+import PlayerWidget from "./player-widget";
+import './global.style.js';
 
-const App = () => {
-  return (
-    <div>
-      <h1>Welcome to React boilerplate</h1>
-      <p>Edit app.jsx file to edit this page</p>
-    </div>
-  );
+const player = {
+  fullName: 'Adrien Sébastien Perruchet da Silva',
+  firstName: 'Adrien',
+  lastName: 'Silva',
+  age: '29',
+  nationality: 'Potuguese',
 };
+
+const App = () => <PlayerWidget {...player} />;
 
 export default App;
