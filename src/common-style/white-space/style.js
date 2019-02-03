@@ -1,4 +1,4 @@
-import { css } from 'glamor';
+import { css } from 'emotion';
 
 const marginTop = (size) => {
   switch (size) {

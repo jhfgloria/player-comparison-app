@@ -1,4 +1,5 @@
 import React from 'react';
+import { cx } from 'emotion';
 import style from './style.js';
 import useResponsive from '../hooks/useResponsive';
 import { marginBottom } from '../common-style/white-space/style.js';
@@ -15,8 +16,9 @@ const PlayerWidget = ({ firstName, lastName, nationality, age }) => {
       </picture>
 
       <div className={style.playerWidgetInformation}>
-        <header className={`${style.playerWidgetPersonalInformation} ${marginBottom('medium')}`}>
+        <header className={cx(style.playerWidgetPersonalInformation, marginBottom('medium'))}>
           <h3 className={marginBottom('small')}>{`${firstName} ${lastName}`}</h3>
+          <h5 className={marginBottom('small')}>Medio defensivo</h5>
           <h5>{`${nationality} | ${age} y.o.`}</h5>
         </header>
 

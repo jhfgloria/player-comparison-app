@@ -1,4 +1,4 @@
-import { css } from 'glamor';
+import { css } from 'emotion';
 
 const playerWidget = css({
   border: '1px solid #e6e6e6',
