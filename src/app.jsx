@@ -1,15 +1,9 @@
 import React from "react";
-import PlayerWidget from "./player-widget";
+import PlayerComparisonGrid from "./player-comparison-grid";
 import './global.style.js';
 
-const player = {
-  fullName: 'Adrien Sébastien Perruchet da Silva',
-  firstName: 'Adrien',
-  lastName: 'Silva',
-  age: '29',
-  nationality: 'Potuguese',
-};
-
-const App = () => <PlayerWidget {...player} />;
+const App = () => (
+  <PlayerComparisonGrid />
+);
 
 export default App;
