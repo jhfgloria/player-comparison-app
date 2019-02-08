@@ -1,5 +1,4 @@
 import { css } from 'emotion';
-import { media } from 'glamor';
 
 const card = css({
   backgroundColor: '#D7D8D9',

@@ -1,6 +1,6 @@
 import React from 'react';
-import { cx } from 'emotion';
 import style from './style.js';
+import { cx } from 'emotion';
 import { marginBottom, marginTop } from '../common-style/white-space/style.js';
 
 const PlayerCard = ({ firstName, lastName, club, statistics, picture }) => {
