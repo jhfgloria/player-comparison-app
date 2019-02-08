@@ -1,37 +1,48 @@
 import { css } from 'emotion';
+import { media } from 'glamor';
 
-const playerCard = css({
+const card = css({
   backgroundColor: '#D7D8D9',
   border: '1px solid #D7D8D9',
   borderRadius: '.1rem',
   boxShadow: '1px 2px 5px 0px #cccccc',
   display: 'flex',
   flexDirection: 'column',
+  height: window.innerHeight / 2,
+  width: '100%',
+  '@media (max-width: 375px)': {
+    height: '400px',
+  },
 });
 
-const playerCardPicture = css({
+const presentation = css({
+  display: 'flex',
+  flex: 1,
+  flexDirection: 'column',
+  position: 'relative',
+});
+
+const picture = css({
   borderBottom: '1px solid #D7D8D9',
-  width: '100%',
   height: '100%',
-  '& source': {
-    width: '100%',
-    height: '100%',
-  },
+  objectFit: 'cover',
+  width: '100%',
   '& img': {
     width: '100%',
     height: '100%',
   },
 });
 
-const playerCardInformation = css({
+const information = css({
   background: 'white',
 });
 
-const playerCardPersonal = css({
-  background: 'linear-gradient(to bottom,#e6e6e600 0%,#000000 100%);',
+const personal = css({
+  position: 'absolute',
+  width: '100%',
+  bottom: '0',
+  background: 'linear-gradient(to bottom,#e6e6e600 0%,#000000 100%)',
   color: 'white',
-  marginTop: '-78px',
-  padding: '20px 1rem 0.4rem 1rem',
   textAlign: 'center',
   '& h2': {
     fontWeight: '500',
@@ -41,7 +52,7 @@ const playerCardPersonal = css({
   },
 });
 
-const playerCardStats = css({
+const stats = css({
   display: 'flex',
   justifyContent: 'space-around',
   '& div': {
@@ -54,17 +65,25 @@ const playerCardStats = css({
       color: '#4CC0AD',
       fontSize: '2rem',
       fontWeight: '500',
+      '@media (max-width: 375px)': {
+        fontSize: '1.5rem',
+      },
     },
     '& h1': {
       fontWeight: '200',
+      '@media (max-width: 375px)': {
+        fontSize: '1rem',
+        fontWeight: '300',
+      },
     },
   },
 });
 
 export default {
-  playerCard,
-  playerCardInformation,
-  playerCardStats,
-  playerCardPersonal,
-  playerCardPicture,
+  card,
+  presentation,
+  information,
+  stats,
+  personal,
+  picture,
 };
