@@ -1,12 +1,9 @@
 import React from "react";
+import PlayerComparisonGrid from "./player-comparison-grid";
+import './global.style.js';
 
-const App = () => {
-  return (
-    <div>
-      <h1>Welcome to React boilerplate</h1>
-      <p>Edit app.jsx file to edit this page</p>
-    </div>
-  );
-};
+const App = () => (
+  <PlayerComparisonGrid />
+);
 
 export default App;
