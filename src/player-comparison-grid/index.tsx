@@ -1,15 +1,21 @@
 import React from 'react';
 import PlayerCard from '../player-card';
 import style from './style';
+import { Player } from '../app';
 
-const PlayerComparisonGrid = (props) => (
+interface Props {
+  playerOne: Player,
+  playerTwo: Player,
+};
+
+const PlayerComparisonGrid = (props: Props) => (
   <div className={style.grid}>
     <div className={style.slot}>
-      <PlayerCard {...props.player1} />
+      <PlayerCard {...props.playerOne} />
     </div>
 
     <div className={style.slot}>
-      <PlayerCard {...props.player2} />
+      <PlayerCard {...props.playerTwo} />
     </div>
   </div>
 );

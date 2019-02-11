@@ -1,11 +1,28 @@
 import React from 'react';
 import PlayerComparisonGrid from './player-comparison-grid';
 import ComparisonTable from './comparison-table';
-import './global.style.js';
-import { marginTop } from './common-style/white-space/style.js';
+import './global.style';
+import { marginTop } from './common-style/white-space/style';
 
-const adrien = {
-  age: '29',
+interface Stats {
+  key: string,
+  value: number,
+};
+
+interface Player {
+  age: number,
+  club: string,
+  picture: string,
+  country: string,
+  firstName: string,
+  fullName: string,
+  lastName: string,
+  position: string,
+  statistics: { [key: string]: Stats },
+};
+
+const adrien: Player = {
+  age: 29,
   club: 'Leicester',
   picture: 'https://cdn-images.rtp.pt/icm/noticias/images/a8/a81ffad540e0f06978ac72724440ded6?860&rect=0,0,1499,822&w=860',
   country: 'Portugal',
@@ -26,8 +43,8 @@ const adrien = {
   },
 };
 
-const william = {
-  age: '29',
+const william: Player = {
+  age: 29,
   club: 'Real Betis',
   picture: 'https://www.mcfcwatch.com/wp-content/uploads/2016/12/william-carvalho-sporting.jpg',
   country: 'Portugal',
@@ -50,9 +67,10 @@ const william = {
 
 const App = () => (
   <React.Fragment>
-    <PlayerComparisonGrid player1={adrien} player2={william} />
-    <ComparisonTable player1={adrien} player2={william} className={marginTop('small')} />
+    <PlayerComparisonGrid playerOne={adrien} playerTwo={william} />
+    <ComparisonTable playerOne={adrien} playerTwo={william} className={marginTop('small')} />
   </React.Fragment>
 );
 
 export default App;
+export { Player, Stats };

@@ -1,9 +1,11 @@
 import React from 'react';
-import style from './style.js';
+import style from './style';
 import { cx } from 'emotion';
-import { marginBottom, marginTop } from '../common-style/white-space/style.js';
+import { marginBottom, marginTop } from '../common-style/white-space/style';
+import { Stats } from '../app';
 
-const PlayerCard = ({ firstName, lastName, club, statistics, picture }) => {
+const PlayerCard = ({ firstName, lastName, club, statistics, picture }: 
+  { firstName: string, lastName: string, club: string, statistics: {[key: string]: Stats}, picture: string }) => {
   return (
     <div className={style.card}>
       <section className={style.presentation}>

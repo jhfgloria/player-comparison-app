@@ -9,7 +9,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx|\.js$/,
+        test: /\.jsx|\.js|\.ts|\.tsx$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -27,6 +27,9 @@ module.exports = {
         loader: 'url-loader?limit=100000' 
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   plugins: [
     htmlWebPackPlugin
