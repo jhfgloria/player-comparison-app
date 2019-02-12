@@ -31,8 +31,8 @@
   },
   "dependencies": {
     "emotion": "10.0.7",
-    "react": "v16.8.0-alpha.1",
-    "react-dom": "v16.8.0-alpha.1",
+    "react": "v16.8.0",
+    "react-dom": "v16.8.0",
     "roboto-npm-webfont": "1.0.1"
   }
 }
