@@ -1,4 +1,4 @@
-import { css } from 'emotion';
+import { css } from "emotion";
 
 const card = css`
   background-color: #D7D8D9;
@@ -80,9 +80,9 @@ const stats = css`
 
 export default {
   card,
-  presentation,
   information,
-  stats,
   personal,
   picture,
+  presentation,
+  stats,
 };

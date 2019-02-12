@@ -1,30 +1,30 @@
-import React from 'react';
-import style from './style';
-import { cx } from 'emotion';
-import { marginBottom, marginTop } from '../common-style/white-space/style';
-import { Stats } from '../app';
+import { cx } from "emotion";
+import React from "react";
+import { IStats } from "../app";
+import { marginBottom, marginTop } from "../common-style/white-space/style";
+import style from "./style";
 
-const PlayerCard = ({ firstName, lastName, club, statistics, picture }: 
-  { firstName: string, lastName: string, club: string, statistics: {[key: string]: Stats}, picture: string }) => {
+const PlayerCard = ({ firstName, lastName, club, statistics, picture }:
+  { firstName: string, lastName: string, club: string, statistics: {[key: string]: IStats}, picture: string }) => {
   return (
     <div className={style.card}>
       <section className={style.presentation}>
         <img className={style.picture} src={picture} alt="Player profile picture" />
-        
+
         <header className={style.personal}>
-          <h2 className={marginBottom('xx-small')}>{`${firstName} ${lastName}`}</h2>
-          <h4 className={marginBottom('x-small')}>{club}</h4>
+          <h2 className={marginBottom("xx-small")}>{`${firstName} ${lastName}`}</h2>
+          <h4 className={marginBottom("x-small")}>{club}</h4>
         </header>
       </section>
 
       <div className={style.information}>
-        <section className={cx(style.stats, marginBottom('small'), marginTop('small'))}>
+        <section className={cx(style.stats, marginBottom("small"), marginTop("small"))}>
           <div>
-            <p>{statistics['appearances'].value}</p>
+            <p>{statistics.appearances.value}</p>
             <h1>Games</h1>
           </div>
           <div>
-            <p>{statistics['minutesPlayed'].value}</p>
+            <p>{statistics.minutesPlayed.value}</p>
             <h1>Minutes</h1>
           </div>
         </section>

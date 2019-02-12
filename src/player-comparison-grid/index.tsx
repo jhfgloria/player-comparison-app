@@ -1,14 +1,14 @@
-import React from 'react';
-import PlayerCard from '../player-card';
-import style from './style';
-import { Player } from '../app';
+import React from "react";
+import { IPlayer } from "../app";
+import PlayerCard from "../player-card";
+import style from "./style";
 
-interface Props {
-  playerOne: Player,
-  playerTwo: Player,
-};
+interface IProps {
+  playerOne: IPlayer;
+  playerTwo: IPlayer;
+}
 
-const PlayerComparisonGrid = (props: Props) => (
+const PlayerComparisonGrid = (props: IProps) => (
   <div className={style.grid}>
     <div className={style.slot}>
       <PlayerCard {...props.playerOne} />

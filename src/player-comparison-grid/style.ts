@@ -1,7 +1,7 @@
-import { css } from 'emotion';
+import { css } from "emotion";
 
 const grid = css`
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 `;
 
